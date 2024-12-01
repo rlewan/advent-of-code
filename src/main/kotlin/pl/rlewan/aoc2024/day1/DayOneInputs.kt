@@ -3,7 +3,7 @@ package pl.rlewan.aoc2024.day1
 class DayOneInputs {
     companion object {
 
-        val listA = listOf(
+        val leftList = listOf(
             57643,
             19062,
             11105,
@@ -1006,7 +1006,7 @@ class DayOneInputs {
             28704,
         )
 
-        val listB = listOf(
+        val rightList = listOf(
             17620,
             47340,
             16109,
