@@ -1,7 +1,9 @@
 import pl.rlewan.aoc2024.day1.DayOneInputs
 import pl.rlewan.aoc2024.day1.calculateDistance
+import pl.rlewan.aoc2024.day1.calculateSimilarityScore
 
 fun main() {
-    val answerToDay1 = calculateDistance(DayOneInputs.leftList, DayOneInputs.rightList)
-    println("Answer to first day's puzzle is $answerToDay1")
+    val distance = calculateDistance(DayOneInputs.leftList, DayOneInputs.rightList)
+    val similarityScore = calculateSimilarityScore(DayOneInputs.leftList, DayOneInputs.rightList)
+    println("Answers to first day's puzzle are: distance: $distance, similarity score: $similarityScore")
 }

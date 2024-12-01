@@ -29,4 +29,29 @@ class DayOneKtTest {
             assertEquals(calculateDistance(a, b), 11)
         }
     }
+
+    @Nested
+    inner class CalculateSimilarityScore {
+        @Test
+        fun `throws when lists are of unequal lengths`() {
+            assertThrows(IllegalArgumentException::class.java) {
+                calculateSimilarityScore(listOf(1, 2, 3), listOf(4))
+            }
+        }
+
+        @Test
+        fun `throws when lists are empty`() {
+            assertThrows(IllegalArgumentException::class.java) {
+                calculateSimilarityScore(emptyList(), emptyList())
+            }
+        }
+
+        @Test
+        fun `gives a correct answer to the sample`() {
+            val left = listOf(3, 4, 2, 1, 3, 3)
+            val right = listOf(4, 3, 5, 3, 9, 3)
+
+            assertEquals(31, calculateSimilarityScore(left, right))
+        }
+    }
 }
